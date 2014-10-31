@@ -1,9 +1,9 @@
 web-flash-card-group-challenge
 ==============================
 
-Our challenge - Patrick, Emily, Peter, Emily
+## Our challenge - Patrick, Emily, Peter, Emily
 
-Steps:
+# Steps:
 (create account)
 Login
 Display decks

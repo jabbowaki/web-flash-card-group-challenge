@@ -1,0 +1,14 @@
+<h1>Welcome <%= User.first.name%></h1>
+<h2>Decks!</h2>
+<p>Please choose your deck</p>
+
+<ul>
+<% Deck.all.each do |obj| %>
+<li><a href="decks/<%= Deck.first.id %>"><%= obj.name %></a></li>
+<%end%>
+</ul>
+
+<h2>Stats!</h2>
+
+
+
