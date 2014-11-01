@@ -16,8 +16,11 @@ post '/decks/:deck_id/:card_id' do
  # p params[:card_id] # this works for card id.
 
   @guess = Guess.create!(card: @card, correct: @correct)
-  erb :"guess" if @deck.next_card_id
-  erb :"no_cards"
+  if @deck.next_card_id
+    erb :"guess"
+  else
+    erb :"no_cards"
+  end
 
   # redirect '/guesses' #this would show @card.quesion, @card.answer, user_anser
   #then have a link to the next card
