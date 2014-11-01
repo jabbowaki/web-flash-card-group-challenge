@@ -1,21 +1,24 @@
 get '/decks/:deck_id/:card_id' do
   @deck = Deck.find(params[:deck_id])
   @card = Card.find(params[:card_id])
+  # raise session[:round_id].inspect
   erb :cards
 end
 
 post '/decks/:deck_id/:card_id' do
  # @deck_id = params[:deck_id]
+
  @deck = Deck.find(params[:deck_id])
- @card = Card.find(params[:card_id]) # this works
-  # find  out whether answer is true or false
+ @card = Card.find(params[:card_id])
+ # session[:round_id] # this works
+# find  out whether answer is true or false
  @correct = @card.check_answer(params[:answer])
 
  # p params[:deck_id] # this works for the deck id
  # p params[:answer] # this works. this is the user's answer.
  # p params[:card_id] # this works for card id.
 
-  @guess = Guess.create!(card: @card, correct: @correct)
+  @guess = Guess.create!(card: @card, correct: @correct, round_id: session[:round_number])
   if @deck.next_card_id
     erb :"guess"
   else
