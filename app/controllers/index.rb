@@ -3,7 +3,8 @@ get '/' do #brings you to home login
 end
 
 post '/decks' do #logs in returning user and redirects to decks page
-  @user = User.find_by(name: params[:name], password: params[:password])
+  @user = User.find_by(name: params[:user][:name], password: params[:user][:password])
+  session[:user_id] = @user.id
   redirect :'/decks'
 end
 
