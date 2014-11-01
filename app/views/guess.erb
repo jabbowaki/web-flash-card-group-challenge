@@ -1,0 +1,22 @@
+
+<h3>Here is your result</h3>
+
+
+
+<p>
+The question was:<br>
+<%= @card.question %>
+<br>
+<br>
+You guessed: <%= params[:answer]  %>
+<br>
+The correct answer is: <%= @card.answer %>
+<br>
+You got the question: <%=
+  if @correct == true
+    "Correct!  Great job."
+  else
+    "Incorrect. Try harder."
+  end
+ %>
+</p>

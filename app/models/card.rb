@@ -3,8 +3,9 @@ class Card < ActiveRecord::Base
   has_many  :guesses
   # Remember to create a migration!
 
-  def self.check_answer(answer)
-    if answer == self.select(:answer)
+  def check_answer(answer)
+    # if answer == self.select(:answer)
+    if answer == self.answer
       return true
     else
       return false
