@@ -6,4 +6,9 @@ class Deck < ActiveRecord::Base
   def what_cards_do_you_have
     self.cards.pluck(:id)
   end
+
+  def next_card_id
+    available_cards = self.what_cards_do_you_have - Guess.used_cards
+    return available_cards.sample
+  end
 end

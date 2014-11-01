@@ -1,4 +1,3 @@
-
 <h3>Here is your result</h3>
 
 
@@ -20,9 +19,9 @@ You got the question: <%=
   end
  %>
 
-<br>
-<br>
 
-<a href="/decks/<%=@deck.id%>/<%=@deck.next_card_id%>"> Click here for next card </a>
-<!-- if deck.next_card_id is nil print  -->
-</p>
+ <h3>You ran out of cards. Game Over.  Great job!</h3>
+ <br>
+
+ <a href='/decks'> Stats </a>
+
