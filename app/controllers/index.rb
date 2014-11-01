@@ -7,10 +7,10 @@ get '/new' do
   erb :'/new'
 end
 
-# post '/new' do
-#   @user = User.create!(params[:users])
-#   redirect :'/decks'
-# end
+post '/new' do
+  @user = User.create!(params[:users])
+  redirect :'/decks'
+end
 
 # get '/decks' do
 #   erb :'decks'
