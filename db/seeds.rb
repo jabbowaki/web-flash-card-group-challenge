@@ -7,6 +7,7 @@ card3 = Card.create!(deck: deck1, question: "What is AL's capitol?", answer: "Mo
 
 user1 = User.create!(name: "Nate", password: "cats")
 user2 = User.create!(name: "Peter", password: "cats")
+
 round1 = Round.create!(deck: deck1, user: user1)
 
 

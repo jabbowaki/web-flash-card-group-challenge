@@ -1,0 +1,14 @@
+<h1> Here are your stats from the last round:</h1>
+
+<h3> <%= Deck.find(Round.last.deck_id).name %> </h3>
+
+<p> You got <%= @right = Guess.where(correct: true, round: Round.last).count %> answers right. </p>
+
+
+<p> You got <%= @wrong = Guess.where(correct: false, round: Round.last).count %> answers wrong. </p>
+
+<p> You got <%= @right.percent_of(Guess.where(round: Round.last).count) %>% right. </p>
+
+<a href='/decks'> Start a new round </a>
+
+

@@ -9,4 +9,7 @@ class Guess < ActiveRecord::Base
     #session doesn't work.  Patch below:
     Guess.where(round: Round.last).pluck(:card_id)
   end
+
+
+
 end
