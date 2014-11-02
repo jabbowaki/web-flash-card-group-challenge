@@ -1,4 +1,4 @@
-<h1>Welcome <%= session[:user_id] %></h1>
+<h1>Welcome <%= User.find(session[:user_id]).name %></h1>
 <!-- <p> Session info: <%= session[:user_id]%> -->
 <h2>Decks!</h2>
 

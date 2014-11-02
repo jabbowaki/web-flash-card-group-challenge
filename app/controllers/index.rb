@@ -7,10 +7,13 @@ post '/decks' do #logs in returning user and redirects to decks page
   if params[:user][:name] == "" || params[:user][:password] == ""
     redirect :'/'
   else
-    @user = User.find_by(name: params[:user][:name]) 
-    if @user.authenticate(@user.name, params[:user][:password])
-      session[:user_id] = @user.id
-      redirect :'/decks'
+    @user = User.find_by(name: params[:user][:name])
+    if @user 
+      if @user.authenticate(@user.name, params[:user][:password])
+        session[:user_id] = @user.id
+        redirect :'/decks'
+      end
+      
     end
     redirect :'/'
   end
