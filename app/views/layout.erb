@@ -18,6 +18,17 @@
   <title></title>
 </head>
 <body>
-  <%= yield %>
+
+  <% if session[:user_id] != nil %>
+  <header>
+    <form action="/logout" method="POST">
+      <input type="submit" value="Logout" />
+    </form> 
+  </header>
+  <% end %>
+  <div class="session_id"><%= "Session id = #{session[:user_id].inspect}" %></div>
+  <div id="container">
+    <%= yield %>
+  </div>
 </body>
 </html>

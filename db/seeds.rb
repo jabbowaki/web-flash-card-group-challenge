@@ -5,7 +5,7 @@ card1 = Card.create!(deck: deck1, question: "What is IL's capitol?", answer: "Sp
 card2 = Card.create!(deck: deck1, question: "What is AK's capitol?", answer: "Juneau")
 card3 = Card.create!(deck: deck1, question: "What is AL's capitol?", answer: "Montgomery")
 
-user1 = User.create!(name: "Nate", password: "cats")
+user1 = User.create!(name: "Nate", password: "$2a$10$XQ97e.c3PDeBwXVB3Rl9OOoZUiw4QsePlQLjBrqXvd9ySvXC.nsqW")
 
 round1 = Round.create!(deck: deck1, user: user1)
 
