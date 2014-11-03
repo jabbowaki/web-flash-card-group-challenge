@@ -1,8 +1,8 @@
 
 <h2>Question:</h2>
-<%= @card.question%>
+<p class="question"><%= @card.question%></p>
 
-<p>yes, spelling and punctution counts</p>
+<p class="advice">yes, spelling and punctution counts</p>
 
   <form action="/decks/<%= @deck.id %>/<%= @card.id %>" method ="POST">
   <label for="user_answer">Answer</label>

@@ -1,0 +1,98 @@
+li {
+    list-style-type: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    color: grey;
+}
+
+.question {
+    font-weight: bold;
+    padding: 5px 0 0 0;
+    color: black;
+}
+
+.answer, .guess_status {
+    font-weight: bold;
+    padding: 5px 0 0 0;
+    color: black;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    height: 30px;
+    width: 100%;
+}
+
+header form {
+    height: 30px;
+    width: 200px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    height: 40px;
+    width: 100%;
+    z-index: 50;
+}
+
+header form input {
+    background-color: black;
+    color: grey;
+    border: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.session_id {
+    color: lightgrey;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    z-index: 99;
+}
+
+#container {
+    background-color: lightgrey;
+    box-shadow: 3px 3px 10px grey;
+    max-width: 700px;
+    margin: 70px auto 0 auto;
+    padding: 5px 30px 50px 30px;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+}
+
+input[type=submit][value="Submit"] {
+    background-color: grey;
+    color: black;
+    text-shadow: 0.5px 0.5px 0.9px lightgrey;
+    box-shadow: 0.8px 0.8px 2px black;
+    margin-top: 10px;
+}
+
+label {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: darkred;
+}
+
+.advice {
+    font-size: .8em;
+    font-style: italic;
+}

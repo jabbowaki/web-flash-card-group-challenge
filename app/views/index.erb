@@ -1,15 +1,15 @@
-<div class="container">
+<!-- <div class="container"> -->
   <h1>Welcome To Our Flashcard Game!</h1>
 
 <ul>
   <li>
     <form action="/decks" method ="POST">
     <label for="user_name">Name</label>
-    <input id="user_name" type="text" name="user[name]" value="<%=  %>" />
+    <input id="user_name" type="text" name="user[name]" placeholder="Name" />
   </li>
   <li>
     <label for="user_password">Password</label>
-    <input id="user_password" type="password" name="user[password]" value="<%=  %>" />
+    <input id="user_password" type="password" name="user[password]" placeholder="Password" />
   </li>
   <li>
     <input type="submit" value="Submit" />
@@ -37,4 +37,4 @@
       <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
     </tr>
   </table> -->
-</div>
+<!-- </div> -->

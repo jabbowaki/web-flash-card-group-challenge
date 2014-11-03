@@ -1,4 +1,5 @@
 get '/decks' do #displays decks page
+  redirect '/' if session[:user_id] == nil
   erb :'/decks'
 end
 
